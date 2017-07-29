@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>背景与边框 </title>
+		<link rel="stylesheet" type="text/css" href="css/background_border.css"/>
+	</head>
+	<body>
+		<h2>半透明边框</h2>
+		<div class="div1">
+			半透明边框需要加：
+			<p>background-cilp: padding-box</p>
+		</div>
+		<div class="clearfix"></div>
+		
+		
+		<h2>多重边框</h2>
+		<div class="div2">
+			多重边框方案一 <span>box-shadow</span>：
+			<p>box-shadow : 0 0 0 10px #655, 0 0 0 20px deeppink</p>
+			<div class="info">
+				box-shadow支持逗号分隔，可以创建任意数量的边框，可做圆角边框
+				<p>
+					注意： 不影响布局，不受 box-sizing的影响
+				</p>
+			</div>
+		</div>
+		
+		
+		<div class="div3">
+			多重边框方案二 <span>outline</span>：
+			<p>
+				border: 10px solid #665555;	
+   				outline: 5px solid deeppink;
+			</p>
+			<div class="info">
+				<p>
+					注意： border-radius不切合
+				</p>
+			</div>
+		</div>
+		
+		<div class="div4">
+			<p>设置 outlin-offset负值可做缝线效果</p>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		
+		<h2>灵活的背景定位</h2>		
+		
+		<div class="div5">
+			背景定位方案一 <span>background-position</span>：
+			<p>
+				background-position: right 20px bottom 10px; 可设置距离右和下的距离
+			</p>
+		</div>
+		
+		<div class="div6">
+			背景定位方案二 <span>background-origin</span>：
+			<p>
+				background-origin: content-box;padding: 10px;  背景偏移量可与padding值一致 
+			</p>
+		</div>
+		<div class="div7">
+			背景定位方案三 <span>calc()</span>：
+			<p>background-position: calc(100% - 20px) calc(100% - 10px); 可计算边距 </p>
+			<div class="info">
+				<p>
+					使用cale()在 + 、 -两侧需要加空白符，否则产出解析错误
+				</p>
+			</div>
+		</div>
+		
+	</body>
+</html>
