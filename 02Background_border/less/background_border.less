@@ -4,21 +4,22 @@ div,p{
 }
 body{
 	background: yellowgreen;
+	& > div {
+      width: 300px;
+      min-height: 100px;
+      float: left;
+      margin: 20px;
+      padding: 5px;
+    }
 }
-body>div{
-	width: 300px;
-	min-height: 100px;
-	float: left;
-	margin: 20px;
-	padding: 5px;
-}
+
 .info{
 	font-size: 12px;
 	margin-top: 15px;
-}
-.info p{
-	color: #FF1493;
-	line-height: 1.5;
+	& p{
+        color: #FF1493;
+        line-height: 1.5;
+    }
 }
 h2{
 	color: #f5f5f5;
